@@ -13,12 +13,14 @@ trans_t = lambda t : torch.Tensor([
     [0,0,1,t],
     [0,0,0,1]]).float()
 
+# rotation around y
 rot_phi = lambda phi : torch.Tensor([
     [1,0,0,0],
     [0,np.cos(phi),-np.sin(phi),0],
     [0,np.sin(phi), np.cos(phi),0],
     [0,0,0,1]]).float()
 
+# rotation around x
 rot_theta = lambda th : torch.Tensor([
     [np.cos(th),0,-np.sin(th),0],
     [0,1,0,0],
